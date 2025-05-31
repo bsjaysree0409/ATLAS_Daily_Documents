@@ -1,0 +1,521 @@
+Task 1:
+
+RegEX Symbols in linux 
+
+List them down with description
+
+. — Matches any single character except newline.
+
+^ — Matches the start of a string.
+
+$ — Matches the end of a string.
+
+\ — Escape character (to treat metacharacters literally).
+
+| — Logical OR (alternation).
+
+() — Grouping.
+
+[] — Character class (set of characters).
+
+^ — Start of string.
+
+$ — End of string.
+
+
+Task 2:
+
+If you are aware of Linux OS.. can you tell me the feature of Linux.
+
+Linux is an open source software, ie. the source code is available freely to anyone to develop modify and change the codes
+It is free of cost to download and use
+Multile users can run the system simultaneously without interfearing each user.
+
+Task 3:
+
+What is Kernel ? can you explain about it in your words..
+
+
+Kernel is the core component of the operating system. It acts as a bridge between computer (hardware) to the application (software).
+Kernel helps in Process management, Memory management, File system storage and retreival, managing device drivers like keyboard, disc, usb etc.,
+it provides a interface that allows program to request the read write operations
+
+Task 4:
+
+BASH in Linux full form and Explanation
+
+BASH stands for Bourne Again SHell
+It is a command line shell and scripting operator language used in Linux and Unix operating system. 
+Run commands like copying files, moving files, listing directories, etc.
+
+Task 5:
+
+Now that you know Linux is also an Operating System like Windows..
+
+What do you think is the difference between LInux and Windows
+
+Linux is open, free, highly customizable, and great for servers, programmers, and those who want control.
+
+Windows is user-friendly, widely supported commercially, and best for desktop users and mainstream software compatibility.
+
+Task 6:
+
+What are the basic components of Linux? Describe each in detail with diagrams.
+1. Kernel
+The core part of Linux that manages hardware resources.
+2. System Libraries
+Libraries provide functions that programs can use to interact with the kernel.
+3. System Utilities
+These are programs and tools that perform individual, specialized functions.
+4. Shell
+The shell is the command-line interface that allows users to interact with the system.
+5.User Space
+The environment where user applications run.
+
+Task 7:
+
+Is it legal to edit Kernal ? when do you think we have to in case?
+Yes, it is legal to edit the Linux kernel.Anyone can legally edit the kernel code, customize it, and even distribute their modified versions, 
+as long as they comply with the GPL license terms (e.g., sharing source code of modifications)
+
+Task  8:
+
+What is LILO? Explain
+LILO stands for LInux LOader.
+LILO is a boot loader for Linux operating systems.
+A boot loader is a small program that runs when the computer starts and is responsible for loading the operating system into memory.
+
+
+Task 9:
+
+
+What is shell? How many shells are there and what are they ? can you explain.
+A Shell is a command-line interpreter that provides a user interface to interact with the operating system.
+It acts as a bridge between the user and the system
+It accepts commands from the user and executes them by communicating with the kernel.
+
+sh - Original Unix shell; basic and simple scripting
+bash - Most common Linux shell; backward compatible with sh; supports advanced scripting features
+csh - Syntax similar to C programming language; less popular now
+tcsh  - Enhanced version of csh with command-line editing and completion
+ksh  - Combines features of sh and csh; scripting enhancements
+zsh  - Highly customizable; powerful features; often used by power users
+fish  - User-friendly with smart suggestions and syntax highlighting
+
+
+Task 10:
+
+What is swap space?
+
+When your computer runs out of RAM while running programs, the Linux kernel moves some inactive or less-used data from RAM to the swap space.
+Swap space is a portion of the hard disk or storage device that is used by the operating system as virtual memory when the physical RAM (Random Access Memory) is full or insufficient.
+
+
+Task 11:
+
+What is Mount ? how do you mount and unmount file system in Linux?
+
+Mounting is the process of attaching a storage device or filesystem to the existing directory structure so that 
+it becomes accessible to the user.When you mount a device (like a hard disk partition, USB drive), you connect its filesystem to a 
+specific directory (called the mount point) within the existing directory tree
+
+Task 12:
+
+What is chmod command ? how to use it?
+chmod stands for change mode
+It is a Linux command used to change the permissions of files and directories.
+Permissions control who can read, write, or execute a file or directory.
+
+Task 13:
+
+Can you add a new user account? Crate a new user in different ways and paste ss
+
+dministrator@f2b757d97a775bc:~$ sudo adduser newusername
+[sudo] password for dministrator:
+info: Adding user `newusername' ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `newusername' (1001) ...
+info: Adding new user `newusername' (1001) with group `newusername (1001)' ...
+info: Creating home directory `/home/newusername' ...
+info: Copying files from `/etc/skel' ...
+New password:
+Retype new password:
+passwd: password updated successfully
+Changing the user information for newusername
+Enter the new value, or press ENTER for the default
+        Full Name []: Jaysree
+        Room Number []: 1
+        Work Phone []: 1
+        Home Phone []: 1
+        Other []: 1
+Is the information correct? [Y/n] y
+info: Adding new user `newusername' to supplemental / extra groups `users' ...
+info: Adding user `newusername' to group `users' ...
+dministrator@f2b757d97a775bc:~$
+
+
+
+dministrator@f2b757d97a775bc:~$ sudo useradd -m -s /bin/bash newusername1
+dministrator@f2b757d97a775bc:~$ sudo passwd newusername1
+New password:
+Retype new password:
+passwd: password updated successfully
+dministrator@f2b757d97a775bc:~$
+
+
+Go to Settings > Users
+Click “Add User”
+Enter name, username, password, and role (Standard/Admin)
+Click Create
+
+Task 14:
+
+Can you change the password of a user?
+How do you do that? Plz share ss
+
+1. Change Your Own Password - passwd
+dministrator@f2b757d97a775bc:~$ passwd
+Changing password for dministrator.
+Current password:
+New password:
+Retype new password:
+passwd: password updated successfully.
+
+Task 15:
+
+What is diff between Process and Thread?
+A process is a program in execution.
+When you run a program (like a text editor, browser, or a script), the operating system creates a process to manage and execute it.
+Each process has its own memory, resources, and execution context (like the program counter, registers, etc.).
+
+A thread is the smallest unit of execution within a process.
+A process can have multiple threads running at the same time.
+All threads within the same process share memory and resources, but each thread has its own execution path (like its own program counter and stack).
+
+Task 16:
+
+Doc 14 Linux Grep commands in docs to study folder .. plz work on it.
+
+dministrator@f2b757d97a775bc:~$ echo "hello hello pleae come here" >sample.txt
+dministrator@f2b757d97a775bc:~$ ls
+LinuxPractice  dummyy.txt  file12.txt  file15.txt  file5.txt  file8.txt      myfile.txt
+dummy.docs     file10.txt  file13.txt  file32.txt  file6.txt  file9.txt      sample.txt
+dummy.txt      file11.txt  file14.txt  file4.txt   file7.txt  hellofile.txt
+dministrator@f2b757d97a775bc:~$ grep -i "HeLLo" sample.txt
+hello hello pleae come here
+dministrator@f2b757d97a775bc:~$ echo "hello hello pleae come here" >sample.txt
+dministrator@f2b757d97a775bc:~$ grep -c "hello" sample.txt
+2
+dministrator@f2b757d97a775bc:~$ grep -c "hello" sample.txt
+2
+dministrator@f2b757d97a775bc:~$ grep -c "pleae" sample.txt
+1
+dministrator@f2b757d97a775bc:~$ grep -l "hello" *
+grep: LinuxPractice: Is a directory
+sample.txt
+dministrator@f2b757d97a775bc:~$ grep -w "hello" sample.txt
+hello hello pleae come here
+dministrator@f2b757d97a775bc:~$ grep -o "hello" sample.txt
+hello
+hello
+dministrator@f2b757d97a775bc:~$ grep -n "hello" sample.txt
+1:hello hello pleae come here
+dministrator@f2b757d97a775bc:~$ grep -v "hello" sample.txt
+dministrator@f2b757d97a775bc:~$ grep "^hello" sample.txt
+hello hello pleae come here
+dministrator@f2b757d97a775bc:~$ grep "llo$" sample.txt
+dministrator@f2b757d97a775bc:~$ grep -e "come" -e "come" -e "come" sample.txt
+hello hello pleae come here
+dministrator@f2b757d97a775bc:~$ echo "hello hello pleae come here, I am here to learn the grep. This is how it works. I know englis. English is my favourite
+language. It is very easy to learn. all people can learn it easily" sample.txt
+hello hello pleae come here, I am here to learn the grep. This is how it works. I know englis. English is my favourite language. It is very easy to learn. al
+l people can learn it easily sample.txt
+dministrator@f2b757d97a775bc:~$ sample.txt
+sample.txt: command not found
+dministrator@f2b757d97a775bc:~$
+dministrator@f2b757d97a775bc:~$ cat sample.txt
+hello hello pleae come here
+dministrator@f2b757d97a775bc:~$ grep -A1 hello sample.txt
+hello hello pleae come here
+dministrator@f2b757d97a775bc:~$ grep -A1 here sample.txt
+hello hello pleae come here
+
+Task 18:
+
+How to check file access permission in Linux?
+
+dministrator@f2b757d97a775bc:~$ ls -l sample.txt
+-rw-r--r-- 1 dministrator dministrator 28 May 31 09:18 sample.txt
+
+Task 19:
+
+What are the default permissions for a new file ?
+
+Plz find out for
+	Owner   → ?
+	Group → ?
+	All and others → ? 
+
+dministrator@f2b757d97a775bc:~$
+owner: Read and Write
+group: Read
+other: no permissions (None)
+
+
+Task 20:
+
+What is the command to change the permisssion to read only for the owner, group and all other users
+
+HInt: chmod 444 filename
+
+dministrator@f2b757d97a775bc:~$ chmod 444 sample
+chmod: cannot access 'sample': No such file or directory
+dministrator@f2b757d97a775bc:~$ chmod 444 hellofile.txt
+dministrator@f2b757d97a775bc:~$ ls -l
+total 28
+drwxr-xr-x 2 dministrator dministrator 4096 May 30 07:56 LinuxPractice
+-rw-r--r-- 1 dministrator dministrator    0 May 31 07:51 dummy.docs
+-rw-r--r-- 1 dministrator dministrator   38 May 31 07:48 dummy.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 31 07:49 dummyy.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file10.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file11.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file12.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file13.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file14.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file15.txt
+-rw-r--r-- 1 dministrator dministrator   28 May 30 11:24 file32.txt
+-rw-r--r-- 1 dministrator dministrator   28 May 30 11:24 file4.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file5.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file6.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file7.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file8.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file9.txt
+-r--r--r-- 1 dministrator dministrator   25 May 31 07:56 hellofile.txt
+-rw-r--r-- 1 dministrator dministrator   18 May 30 10:23 myfile.txt
+-r--r--r-- 1 dministrator dministrator   28 May 31 09:18 sample.txt
+dministrator@f2b757d97a775bc:~$
+
+Task 22:
+What was the command for changing the file permissions to -rw-r-----?
+Hint : use chmod 640 filename
+
+dministrator@f2b757d97a775bc:~$ chmod 640 sample.txt
+dministrator@f2b757d97a775bc:~$ ls -l
+total 28
+drwxr-xr-x 2 dministrator dministrator 4096 May 30 07:56 LinuxPractice
+-rw-r--r-- 1 dministrator dministrator    0 May 31 07:51 dummy.docs
+-rw-r--r-- 1 dministrator dministrator   38 May 31 07:48 dummy.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 31 07:49 dummyy.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file10.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file11.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file12.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file13.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file14.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file15.txt
+-rw-r--r-- 1 dministrator dministrator   28 May 30 11:24 file32.txt
+-rw-r--r-- 1 dministrator dministrator   28 May 30 11:24 file4.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file5.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file6.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file7.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file8.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file9.txt
+-r--r--r-- 1 dministrator dministrator   25 May 31 07:56 hellofile.txt
+-rw-r--r-- 1 dministrator dministrator   18 May 30 10:23 myfile.txt
+-rw-r----- 1 dministrator dministrator   28 May 31 09:18 sample.txt
+
+Task 23:
+Change chmod.exercises permissions to -rwxr-x--x
+Change the file permissions to match the following:
+
+
+owner: Read, Write and Execute
+group: Read and Execute
+other: Execute
+
+Task:
+
+create shortcut
+                                                                                                                                                                           
+dministrator@f2b757d97a775bc:~$ ls
+LinuxPractice  dummy.docs  dummyy.txt  file11.txt  file13.txt  file15.txt  file4.txt  file6.txt  file8.txt  hellofile.txt  sample.txt
+doc_link       dummy.txt   file10.txt  file12.txt  file14.txt  file32.txt  file5.txt  file7.txt  file9.txt  myfile.txt     the_end.txt
+dministrator@f2b757d97a775bc:~$ cat doc_link
+cat: doc_link: No such file or directory
+dministrator@f2b757d97a775bc:~$ cat samplefile.txt
+cat: samplefile.txt: No such file or directory
+dministrator@f2b757d97a775bc:~$ ln -s "doc_link.txt" "newshortcutfile.txt"
+dministrator@f2b757d97a775bc:~$ cat newshortcut.txt
+cat: newshortcut.txt: No such file or directory
+dministrator@f2b757d97a775bc:~$ vi samplefile.txt
+dministrator@f2b757d97a775bc:~$ newshortcut.txt
+newshortcut.txt: command not found
+dministrator@f2b757d97a775bc:~$ ls
+LinuxPractice  dummy.txt   file11.txt  file14.txt  file4.txt  file7.txt  hellofile.txt        sample.txt
+doc_link       dummyy.txt  file12.txt  file15.txt  file5.txt  file8.txt  myfile.txt           samplefile.txt
+dummy.docs     file10.txt  file13.txt  file32.txt  file6.txt  file9.txt  newshortcutfile.txt  the_end.txt
+dministrator@f2b757d97a775bc:~$ ls -l
+total 32
+drwxr-xr-x 2 dministrator dministrator 4096 May 30 07:56 LinuxPractice
+lrwxrwxrwx 1 dministrator dministrator   23 May 31 11:33 doc_link -> /home/user/document.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 31 07:51 dummy.docs
+-rw-r--r-- 1 dministrator dministrator   38 May 31 07:48 dummy.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 31 07:49 dummyy.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file10.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file11.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file12.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file13.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file14.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file15.txt
+-rw-r--r-- 1 dministrator dministrator   28 May 30 11:24 file32.txt
+-rw-r--r-- 1 dministrator dministrator   28 May 30 11:24 file4.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file5.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file6.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file7.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file8.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file9.txt
+-r--r--r-- 1 dministrator dministrator   25 May 31 07:56 hellofile.txt
+-rw-r--r-- 1 dministrator dministrator   18 May 30 10:23 myfile.txt
+lrwxrwxrwx 1 dministrator dministrator   12 May 31 11:42 newshortcutfile.txt -> doc_link.txt
+-rw-r----- 1 dministrator dministrator   28 May 31 09:18 sample.txt
+-rw-r--r-- 1 dministrator dministrator   27 May 31 11:43 samplefile.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 31 11:29 the_end.txt
+dministrator@f2b757d97a775bc:~
+
+
+Task 24:
+What was the command for changing the file permissions to -rwxr-x--x
+
+
+Hint : use chmod 751 filename
+
+dministrator@f2b757d97a775bc:~$ chmod 751 sample.txt
+dministrator@f2b757d97a775bc:~$ ls -l
+total 32
+drwxr-xr-x 2 dministrator dministrator 4096 May 30 07:56 LinuxPractice
+lrwxrwxrwx 1 dministrator dministrator   23 May 31 11:33 doc_link -> /home/user/document.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 31 07:51 dummy.docs
+-rw-r--r-- 1 dministrator dministrator   38 May 31 07:48 dummy.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 31 07:49 dummyy.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file10.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file11.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file12.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file13.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file14.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file15.txt
+-rw-r--r-- 1 dministrator dministrator   28 May 30 11:24 file32.txt
+-rw-r--r-- 1 dministrator dministrator   28 May 30 11:24 file4.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file5.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file6.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file7.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file8.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 30 10:34 file9.txt
+-r--r--r-- 1 dministrator dministrator   25 May 31 07:56 hellofile.txt
+-rw-r--r-- 1 dministrator dministrator   18 May 30 10:23 myfile.txt
+lrwxrwxrwx 1 dministrator dministrator   12 May 31 11:42 newshortcutfile.txt -> doc_link.txt
+-rwxr-x--x 1 dministrator dministrator   28 May 31 09:18 sample.txt
+-rw-r--r-- 1 dministrator dministrator   27 May 31 11:43 samplefile.txt
+-rw-r--r-- 1 dministrator dministrator    0 May 31 11:29 the_end.txt
+dministrator@f2b757d97a775bc:~$
+
+
+
+Task 25:
+
+
+Guys what will this command do?
+
+
+chown -c master file1.txt
+
+This command changes the owner of the file file1.txt to the user master, and prints a message if the change was made.
+
+Processes 👍
+Task 26:
+Can you define what is  a process
+A process is an instance of a program in execution.
+
+When you run a program or command in Linux (or any OS), the operating system creates a process to manage the running task.
+
+Task 27:
+What is command to check foreground process and background process
+
+dministrator@f2b757d97a775bc:~$ gedit
+Command 'gedit' not found, but can be installed with:
+sudo snap install gedit  # version 48.1, or
+sudo apt  install gedit  # version 46.1-3
+See 'snap info gedit' for additional versions.
+dministrator@f2b757d97a775bc:~$
+dministrator@f2b757d97a775bc:~$ sudo snap install gedit  # version 48.1
+[sudo] password for dministrator:
+Download snap "snapd" (24505) from channel "stable"                                                                                         2%  359kB/s 2m25s
+2025-05-31T14:42:01Z INFO Waiting for automatic snapd restart...
+error: cannot perform the following tasks:
+- Download snap "gnome-46-2404" (90) from channel "stable" (read tcp 172.27.146.185:38494->91.189.91.99:443: read: connection reset by peer)
+- Download snap "gtk-common-themes" (1535) from channel "stable" (read tcp 172.27.146.185:58216->91.189.91.100:443: read: connection reset by peer)
+- Download snap "mesa-2404" (495) from channel "stable" (read tcp 172.27.146.185:45530->91.189.91.100:443: read: connection reset by peer)
+dministrator@f2b757d97a775bc:~$ gedit
+Content snap command-chain for /snap/gedit/697/gpu-2404/bin/gpu-2404-provider-wrapper not found: ensure slot is connected
+dministrator@f2b757d97a775bc:~$
+
+Task 28:
+Can you list all the running processes?
+Hint use ps
+
+dministrator@f2b757d97a775bc:~$ ps
+    PID TTY          TIME CMD
+    462 pts/2    00:00:01 bash
+   1390 pts/2    00:00:00 ps
+dministrator@f2b757d97a775bc:~$
+
+Task 29:
+What will ps -f command do ? plz try n check .. ss required.
+
+dministrator@f2b757d97a775bc:~$ ps -f
+UID          PID    PPID  C STIME TTY          TIME CMD
+dminist+     462     456  0 09:37 pts/2    00:00:01 -bash
+dminist+    1391     462 50 14:56 pts/2    00:00:00 ps -f
+dministrator@f2b757d97a775bc:~$
+
+Task 30:
+Can you create  a variable name with your name in it 
+Ex: 
+Name =  “prasunamba”
+
+
+Id  = 10001
+
+
+And check 
+Echo $Name
+Chek the output
+
+dministrator@f2b757d97a775bc:~$ Name="Jaysree"
+dministrator@f2b757d97a775bc:~$ Id=10001
+dministrator@f2b757d97a775bc:~$ echo $Name
+Jaysree
+dministrator@f2b757d97a775bc:~$ echo $Id
+10001
+dministrator@f2b757d97a775bc:~$
+
+Task 31:
+Can you make the above name variable read only..
+Ex:
+Name = “Prasunamba”
+Readonly Name
+Name = “Meher” —>what will this display.. Is it saying read only?? Pl check 
+
+Task 32:
+Now will unset or delete the variables
+
+
+Use the below command and check
+Unset Name
+Now check for
+ echo $Name   —> this should not print anything.. Plz try also specify the reason
+dministrator@f2b757d97a775bc:~$ readonly Name
+dministrator@f2b757d97a775bc:~$ unset Name
+-bash: unset: Name: cannot unset: readonly variable
+dministrator@f2b757d97a775bc:~$
+
+
+
