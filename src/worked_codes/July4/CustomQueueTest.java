@@ -14,7 +14,8 @@ class CustomQueue {
         size = 0;
     }
 
-    // Check if the queue is empty
+    // Check if the queue is empty Initializes the queue with:
+
     public boolean isEmpty() {
         return size == 0;
     }
