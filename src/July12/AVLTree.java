@@ -109,7 +109,7 @@ public class AVLTree {
 
     // Main method to test the AVL tree
     public static void main(String[] args) {
-        AVLTree tree = new AVLTree();
+        AVLTree1 tree = new AVLTree1();
 
         int[] keys = { 10, 20, 30, 40, 50, 25 };
 
