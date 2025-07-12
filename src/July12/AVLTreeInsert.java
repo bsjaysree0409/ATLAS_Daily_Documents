@@ -1,26 +1,25 @@
 package July12;
 
-
-// AVL Tree class
-public class AVLTree {
+// AVL Tree class with insert operation
+public class AVLTreeInsert {
     private AVLNode root;
 
-    // Get height of node
-    int height(AVLNode N) {
-        return (N == null) ? 0 : N.height;
+    // Get the height of a node
+    private int height(AVLNode node) {
+        return node == null ? 0 : node.height;
     }
 
-    // Get balance factor
-    int getBalance(AVLNode N) {
-        return (N == null) ? 0 : height(N.left) - height(N.right);
+    // Get balance factor of node
+    private int getBalance(AVLNode node) {
+        return node == null ? 0 : height(node.left) - height(node.right);
     }
 
     // Right rotate
-    AVLNode rightRotate(AVLNode y) {
+    private AVLNode rightRotate(AVLNode y) {
         AVLNode x = y.left;
         AVLNode T2 = x.right;
 
-        // Perform rotation
+        // Rotate
         x.right = y;
         y.left = T2;
 
@@ -32,11 +31,11 @@ public class AVLTree {
     }
 
     // Left rotate
-    AVLNode leftRotate(AVLNode x) {
+    private AVLNode leftRotate(AVLNode x) {
         AVLNode y = x.right;
         AVLNode T2 = y.left;
 
-        // Perform rotation
+        // Rotate
         y.left = x;
         x.right = T2;
 
@@ -47,10 +46,12 @@ public class AVLTree {
         return y;
     }
 
-    // Insert a key into the AVL Tree
-    AVLNode insert(AVLNode node, int key) {
-        // 1. Perform normal BST insertion
-        if (node == null) return new AVLNode(key);
+    // Insert node into AVL Tree
+    private AVLNode insert(AVLNode node, int key) {
+        // Step 1: Regular BST insert
+        if (node == null)
+            return new AVLNode(key);
+
         if (key < node.key)
             node.left = insert(node.left, key);
         else if (key > node.key)
@@ -58,13 +59,13 @@ public class AVLTree {
         else
             return node; // Duplicate keys not allowed
 
-        // 2. Update height
+        // Step 2: Update height
         node.height = 1 + Math.max(height(node.left), height(node.right));
 
-        // 3. Get balance factor
+        // Step 3: Get balance factor
         int balance = getBalance(node);
 
-        // 4. Balance the tree (4 cases)
+        // Step 4: Balance tree if needed
         // Left Left Case
         if (balance > 1 && key < node.left.key)
             return rightRotate(node);
@@ -88,12 +89,12 @@ public class AVLTree {
         return node;
     }
 
-    // Public insert method
+    // Public method to insert key
     public void insert(int key) {
         root = insert(root, key);
     }
 
-    // In-order traversal
+    // In-order traversal (sorted output)
     public void inorderTraversal() {
         inorderHelper(root);
         System.out.println();
@@ -107,17 +108,19 @@ public class AVLTree {
         }
     }
 
-    // Main method to test the AVL tree
+    // Test insert operation
     public static void main(String[] args) {
-        AVLTree tree = new AVLTree();
+        AVLTreeInsert avl = new AVLTreeInsert();
 
-        int[] keys = { 10, 20, 30, 40, 50, 25 };
+        // Insert values
+        avl.insert(30);
+        avl.insert(20);
+        avl.insert(40);
+        avl.insert(10);
+        avl.insert(25);
+        avl.insert(50);
 
-        for (int key : keys) {
-            tree.insert(key);
-        }
-
-        System.out.println("In-order traversal of the AVL Tree:");
-        tree.inorderTraversal();
+        System.out.println("In-order traversal after insertions:");
+        avl.inorderTraversal();
     }
 }
