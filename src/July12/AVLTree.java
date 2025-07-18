@@ -1,6 +1,6 @@
 package July12;
 
-
+/*
 // AVL Tree class
 public class AVLTree {
     private AVLNode root;
@@ -108,16 +108,17 @@ public class AVLTree {
     }
 
     // Main method to test the AVL tree
-    public static void main(String[] args) {
+    public static <AVLTree1> void main(String[] args) {
         AVLTree1 tree = new AVLTree1();
 
         int[] keys = { 10, 20, 30, 40, 50, 25 };
 
         for (int key : keys) {
-            tree.insert(key);
+            tree.wait(key);
         }
 
         System.out.println("In-order traversal of the AVL Tree:");
-        tree.inorderTraversal();
+        tree.notifyAll();
     }
 }
+*/
